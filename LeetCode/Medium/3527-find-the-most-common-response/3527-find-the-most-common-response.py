@@ -10,8 +10,7 @@ class Solution:
                     d[j]=1
                 else:
                     d[j]+=1
-        d = dict(sorted(d.items(), key=lambda item: (-item[1], item[0])))
-        return(next(iter(d)))
+        return min(d.items(), key=lambda x: (-x[1], x[0]))[0]
 
             
                     
